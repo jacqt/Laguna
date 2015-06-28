@@ -111,7 +111,8 @@ chrome.runtime.onMessage.addListener(
                 url: sender.tab.url,
                 referrer: request.message.referrer,
                 title: sender.tab.title,
-                highlighted: sender.tab.highlighted
+                highlighted: sender.tab.highlighted,
+                html_content : JSON.stringify(request.message.html_content)
               }
             });
             break;
