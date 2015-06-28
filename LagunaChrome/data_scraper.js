@@ -1,4 +1,5 @@
 
+var __laguna_scraper_url = true;
 
 console.log('Running the data scraper...');
 function send_message(message_to_send){

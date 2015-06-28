@@ -16,6 +16,7 @@
     "http://*/",
     "https://*/",
     "activeTab",
+    "tabs",
     "storage"
   ]
 }

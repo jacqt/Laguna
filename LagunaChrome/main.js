@@ -38,7 +38,6 @@ function updated_tab(tab_id, change_info, tab) {
   chrome.tabs.executeScript(tab_id, {file: "data_scraper.js"}, function(arg){
     send_event_data('updated tab', get_tab_data(tab));
   });
-
 }
 
 // Parameters:
@@ -71,6 +70,7 @@ chrome.tabs.onRemoved.addListener(removed_tab);
 
 // Gets the data from a tab to send to the server
 function get_tab_data(tab){
+  console.log(tab);
   return {
     tab_id: tab.id,
     page: {
@@ -162,9 +162,8 @@ function send_event_data(event_type, event_data){
   if (!user_info || !user_info.id || !user_info.email){
     return console.log('Could not get user info');
   }
-  return;
   var request = $.ajax({
-    url : '??',
+    url : 'http://laguna.notifsta.com/events',
     type: 'post',
     data: {
       type: event_type,
