@@ -1,0 +1,19 @@
+{
+  "name": "LagunaChrome",
+  "version": "n",
+  "homepage": "https://github.com/jacqt/Laguna",
+  "authors": [
+    "Anthony Guo <anthony.guo@some.ox.ac.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
